@@ -343,6 +343,10 @@ export default {
     },
     optionKeys () {
       const options = this.groupValues ? this.flatAndStrip(this.options) : this.options
+      debugger;
+      if (options.length == 0) {
+        return [];
+      }
       return options.map(element => this.customLabel(element, this.label).toString().toLowerCase())
     },
     currentOptionLabel () {
